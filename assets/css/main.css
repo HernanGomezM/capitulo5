@@ -8,6 +8,13 @@
 */
 
 /* Reset */
+#comboregis{
+	background-color: rgba(255, 255, 255, 0.2);
+}
+#comboregis:hover{
+	background-color: rgba(0, 255, 255, 0.2);
+	color: black;
+}
 #tablaregis{
 	width: 150%;
 

@@ -8,6 +8,7 @@ $addTitulo = $_POST['titulo'];
 $addFoto = $_POST['foto'];
 $addwebpersonal = $_POST['webpersonal'];
 $addemail = $_POST['email'];
+$addPermiso = $_POST['permiso'];
 #------------------------------------------------------------------------
 
 //creo la coneccion
@@ -22,14 +23,15 @@ VALUES ('$usuario',
 	'$addFoto',
 	'$addwebpersonal',
 	'$addemail',
-	1);";
+	'$addPermiso');";
 //ejecuto la consulta
+echo $consulta;
 $resul = $cone->exec($consulta);
-echo "<scrip lenguage='javascript'> alert = 'Usuario registrado correctamente' </scrip>";
+echo "<scrip language=’JavaScript’> alert('Usuario registrado correctamente'); </scrip>";
 echo "
 <html>
 	<head>
-		<meta http-equiv='REFRESH' content=0;url=php/index.html>
+		<meta http-equiv='REFRESH' content=0;url=index.html>
 	</head>
 </html>";
 //cerrar coneccion
