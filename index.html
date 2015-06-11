@@ -1,3 +1,7 @@
+<?php
+session_start();
+include "posts/includes/variablesusuario.php";
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -17,7 +21,7 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
+			<form id="signup-form" method="POST" action="#">
 				<input type="email" name="email" id="email" placeholder="E-mail@ejemplo.com" />
 				<input type="submit" value="Ingresar" />
 			</form>

@@ -5,6 +5,7 @@ $contrasena = $_POST['contrasena'];
 $addNombre = $_POST['nombre'];
 $addApellido = $_POST['apellido'];
 $addTitulo = $_POST['titulo'];
+$addDescripcion = $_POST['descripcion'];
 $addFoto = $_POST['foto'];
 $addwebpersonal = $_POST['webpersonal'];
 $addemail = $_POST['email'];
@@ -12,28 +13,27 @@ $addPermiso = $_POST['permiso'];
 #------------------------------------------------------------------------
 
 //creo la coneccion
-$cone = new PDO('sqlite:BasesdeDatos/blogs.db') or die('ha sido imposible establecer la conexion');
+$cone = new PDO('sqlite:blogs.db');
+
+if ($cone == true) {
 //crear consulta
 $consulta = "INSERT INTO Usuarios 
-VALUES ('$usuario',
+VALUES 
+(	'$usuario',
 	'$contrasena',
 	'$addNombre',
 	'$addApellido',
 	'$addTitulo',
+	'$addDescripcion',
 	'$addFoto',
 	'$addwebpersonal',
 	'$addemail',
-	'$addPermiso');";
+	$addPermiso);";
 //ejecuto la consulta
-echo $consulta;
-$resul = $cone->exec($consulta);
-echo "<scrip language=’JavaScript’> alert('Usuario registrado correctamente'); </scrip>";
-echo "
-<html>
-	<head>
-		<meta http-equiv='REFRESH' content=0;url=index.html>
-	</head>
-</html>";
+$resultado = $cone->exec($consulta);
+}else{
+	echo "Error En la conexion";
+}
 //cerrar coneccion
 $cone =  NULL;
 ?>

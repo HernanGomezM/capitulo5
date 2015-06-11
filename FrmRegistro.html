@@ -17,21 +17,21 @@
 
 		<!-- Signup Form -->
 		
-			<form id="frmRegistro" method="post" action="php/registrar.php">
+			<form id="frmRegistro" method="POST" action="php/registrar.php">
 			<table id="tablaregis">
+			
 			<tr>
-
 			<td style="padding-right: 35px">
 				<input type="text" name="usuario" placeholder="Usuario" autofocus/><br>
 				<input type="password" name="contrasena" placeholder="contrasena" /><br>
 				<input type="text" name="nombre" placeholder="Nombre" /><br>
 				<input type="text" name="apellido" placeholder="Apellido" /><br>
-				<input type="text" name="webpersonal" placeholder="Web Personal" />
+				<input type="text" name="titulo" placeholder="Titulo" />
 			</td>
 			<td style="padding-left: 35px">
-				<input type="text" name="titulo" placeholder="Titulo" /><br>
 				<input type="text" name="descripcion" placeholder="Descripcion"/><br>
 				<input type="text" name="foto" placeholder="Foto" /><br>
+				<input type="text" name="webpersonal" placeholder="Web Personal" /><br>
 				<input type="text" name="email" placeholder="E-Mail" /><br>
 				
 				<select name="permiso" id="comboregis">
@@ -43,12 +43,6 @@
 			</table>
 				<input type="submit" value="Registrar" style="Position:Absolute; left:165%; top:33%" id="botonregis" />
 			</form>
-		
-
-		<!-- Footer -->
-			<footer id="footer">
-			</footer>
-
 		<!-- Scripts -->
 			<script src="assets/js/ie/respond.min.js"></script>
 			<script src="assets/js/main.js"></script>
