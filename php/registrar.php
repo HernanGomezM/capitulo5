@@ -13,7 +13,7 @@ $addPermiso = $_POST['permiso'];
 #------------------------------------------------------------------------
 
 //creo la coneccion
-$cone = new PDO('sqlite:blogs.db');
+$cone = new PDO('sqlite:../blogs.db');
 
 if ($cone == true) {
 //crear consulta
@@ -31,6 +31,12 @@ VALUES
 	$addPermiso);";
 //ejecuto la consulta
 $resultado = $cone->exec($consulta);
+echo"
+<html>
+	<head>
+		<meta http-equiv='REFRESH' content=0;url=../index.html>
+	</head>
+</html>";
 }else{
 	echo "Error En la conexion";
 }

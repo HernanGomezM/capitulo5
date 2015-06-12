@@ -16,14 +16,14 @@ include "posts/includes/variablesusuario.php";
 		
 			<header id="header">
 				<h1>¡¡¡BIENBENIDO!!!</h1>
-				<p>Si no es tar registrdo porfavor pulsa<br />
+				<p style="width:100%;">Si no es tar registrdo porfavor pulsa<br />
 				<a href="FrmRegistro.html">AQUI</a>.</p>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="POST" action="#">
-				<input type="email" name="email" id="email" placeholder="E-mail@ejemplo.com" />
-				<input type="submit" value="Ingresar" />
+			<form action="php/login.php" method="POST">
+				<input type="email" name="email" placeholder="E-mail@ejemplo.com" /><br>
+				<input type="submit" value="Ingresar" id="botonlogin" />
 			</form>
 
 		<!-- Footer -->
