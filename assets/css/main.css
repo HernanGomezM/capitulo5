@@ -8,6 +8,14 @@
 */
 
 /* Reset */
+td.archivo input[type="file"]{
+	background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
+	display: block !important;
+    width: 157px !important;
+    height: 45px !important;
+    opacity: 1 !important;
+    overflow: hidden;
+}
 #comboregis{
 	background-color: rgba(255, 255, 255, 0.2);
 }

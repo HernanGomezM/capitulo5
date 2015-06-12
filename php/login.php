@@ -5,27 +5,29 @@ $email = $_POST['email'];
 //conexion
 $cone = new PDO('sqlite:../blogs.db');
 //consulta
-$consulta = "SELECT * FROM Usuarios";
+$consulta = "SELECT * FROM Usuarios WHERE email='".$email."'";
 //ejecucion de consulta
 $result = $cone->query($consulta);
 //repasamos resultados
 foreach ($result as $key) {
+	
 	$CorreoPersona = $key['email'];
-	if ($email == $CorreoPersona) {
-	echo "<html>
-	<head>
-		<meta = http-equiv='REFRESH' content = '0; url=../posts/index.php'>
-	</head>
-
-</html>";
-	}else{
-		echo "<script lenguage='JavaScript'>alert('Usuario incorrecto');</script>";
-	echo "<html>
-	<head>
-		<meta = http-equiv='REFRESH' content = '0; url=../index.html'>
-	</head>
-
-</html>";
+if ($CorreoPersona == $email) {
+	echo "<script>alert('!!!bienvenido¡¡¡')</script>";
+	echo "
+	<html>
+		<head>
+			<meta = http-equiv='REFRESH' content = '0; url=../posts/index.php'>
+		</head>
+	</html>";
+}elseif ($CorreoPersona !== $email){
+		echo "<script>alert('Usuario Incorrecto Vuelva a Intentar')</script>";
+		echo "
+		<html>
+			<head>
+				<meta = http-equiv='REFRESH' content = '0; url=../posts/index.php'>
+			</head>
+		</html>";
 	}
 }
 //cerrar conexion
